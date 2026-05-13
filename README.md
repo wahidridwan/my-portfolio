@@ -4,7 +4,7 @@ Welcome to my professional portfolio website! This project showcases my skills, 
 
 ## 🌐 Live Demo
 You can visit the live site here: [https://my-portfolio-delta-liart.vercel.app](https://my-portfolio-delta-liart.vercel.app)  
-Short Link: (https://tinyurl.com/wahid-dev)
+Short Link: (https://tinyurl.com/wahid-port)
 
 ## 🛠️ Tech Stack
 - **Frontend:** React.js, Tailwind CSS
