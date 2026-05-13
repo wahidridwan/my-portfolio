@@ -3,7 +3,7 @@
 Welcome to my professional portfolio website! This project showcases my skills, experience, and the projects I've built using modern web technologies.
 
 ## 📸 Preview
-![Portfolio Screenshot](./public/portfolio.png)
+![Portfolio Screenshot](./src/assets/screenshot.png)
 
 ## 🌐 Live Demo
 You can visit the live site here: [https://my-portfolio-delta-liart.vercel.app](https://my-portfolio-delta-liart.vercel.app)  
