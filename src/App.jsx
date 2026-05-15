@@ -11,7 +11,7 @@ const App = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  const myImage = "https://media.licdn.com/dms/image/v2/D4D03AQGV9la5iZkm9A/profile-displayphoto-shrink_400_400/B4DZRkhG1UHEAk-/0/1736853188848?e=1779926400&v=beta&t=wf7LDgbtNyp2Wu_WnooDJ74BPSTQM1EDLrWzdAs0dSs";    
+  const myImage = "/msd.jpg.jpg";    
   
   const socialLinks = {
     github: "https://github.com/wahidridwan",
