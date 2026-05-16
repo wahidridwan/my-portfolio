@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Experience from "./Experience";
+
 const App = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -114,6 +115,11 @@ const App = () => {
           </div>
         </div>
       </section>
+
+      {/* 🛑 --- WORKING EXPERIENCE SECTION --- */}
+      <div className="relative z-10 mt-20">
+        <Experience />
+      </div>
 
       {/* --- EXPERTISE BOXES --- */}
       <section className="relative z-10 px-6 max-w-7xl mx-auto mt-32">
