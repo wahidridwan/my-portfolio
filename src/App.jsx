@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Experience from './components/Experience';
+import Experience from "./Experience";
 const App = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
