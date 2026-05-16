@@ -6,7 +6,7 @@ const Projects = () => {
       title: "Restaurant Ordering System",
       description: "A complete management and ordering dashboard for restaurants. Features a clean interface to track incoming orders, handle food items, and monitor real-time dining operations.",
       tech: ["HTML5", "CSS3", "JavaScript", "GitHub Pages"],
-      image: "/restaurant.png", // Tomar public folder-e thaka original chobi
+      image: "/restaurant.png.png", // উইন্ডোজের ডাবল ডট পিএনজি ফরম্যাট ফিক্স করা হলো
       liveLink: "https://tamimtxd.github.io/restaurant-ordering-system/management/",
       githubLink: "https://github.com/wahidridwan/restaurant-ordering-system",
       hasLive: true
@@ -15,7 +15,7 @@ const Projects = () => {
       title: "Sentiment Analyzer UI",
       description: "An intuitive graphical user interface designed for analyzing text sentiments. It processes textual inputs and provides instant visual feedback on emotional tones and sentiment scores when compiled.",
       tech: ["Java", "Swing/JavaFX", "NLP", "UI Design"],
-      image: "/sentiment.png", // Tomar public folder-e thaka original chobi
+      image: "/sentiment.png.png", // উইন্ডোজের ডাবল ডট পিএনজি ফরম্যাট ফিক্স করা হলো
       liveLink: "https://github.com/wahidridwan/SentimentAnalyzerUI#readme",
       githubLink: "https://github.com/wahidridwan/SentimentAnalyzerUI",
       hasLive: false
@@ -46,8 +46,10 @@ const Projects = () => {
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500 opacity-80 group-hover:opacity-100"
-                  onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800"; }}
+                  className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+                  onError={(e) => { 
+                    console.error("Image failed to load:", project.image);
+                  }} 
                 />
               </div>
 
@@ -58,13 +60,12 @@ const Projects = () => {
                     Featured Project
                   </span>
                   
-                  {/* লাইভ ডেমো লিঙ্ক আইকন (সবুজ তীর চিহ্ন) */}
+                  {/* সবুজ তীর চিহ্ন */}
                   <a 
                     href={project.liveLink} 
                     target="_blank" 
                     rel="noreferrer" 
                     className="text-[#bef264] hover:text-white transition-colors"
-                    title={project.hasLive ? "Live Demo" : "View Code/Interface"}
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">
                       <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -73,7 +74,6 @@ const Projects = () => {
                   </a>
                 </div>
 
-                {/* প্রজেক্টের নাম */}
                 <h3 className="text-2xl font-black text-white tracking-tight uppercase mb-4 group-hover:text-[#bef264] transition-colors">
                   {project.title}
                 </h3>
@@ -88,12 +88,10 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* প্রজেক্টের ডেসক্রিপশন */}
                 <p className="text-gray-400 text-sm md:text-base leading-relaxed font-medium mb-6">
                   {project.description}
                 </p>
 
-                {/* অ্যাকশন বাটনসমূহ */}
                 <div className="flex gap-4">
                   {project.hasLive && (
                     <a href={project.liveLink} target="_blank" rel="noreferrer" className="px-6 py-2.5 bg-[#bef264] text-black rounded-xl text-xs font-black uppercase tracking-wider transition-all hover:bg-[#bef264]/90 shadow-[0_0_15px_rgba(190,242,100,0.15)]">
