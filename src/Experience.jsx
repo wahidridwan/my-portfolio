@@ -5,8 +5,6 @@ const Experience = () => {
     {
       role: "Assistant Site Engineer (Intern)",
       company: "Spectra Engineers Limited",
-      type: "Full-time",
-      duration: "Oct 2023 - Dec 2023 · 3 mos",
       location: "Dhaka, Bangladesh",
       description: [
         "Assisted in daily site supervision, project monitoring, and quality control.",
@@ -16,8 +14,6 @@ const Experience = () => {
     {
       role: "Site Engineer",
       company: "Scion Asset Developers Ltd.",
-      type: "Full-time",
-      duration: "Jan 2023 - Sep 2023 · 9 mos",
       location: "Dhaka, Bangladesh",
       description: [
         "Managed on-site operations, structural execution, and materials management.",
@@ -27,32 +23,35 @@ const Experience = () => {
   ];
 
   return (
-    <section className="py-16 bg-[#0a192f] text-white" id="experience">
-      <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-teal-400">
-          💼 Working Experience
+    <section className="py-16 bg-[#050505] text-white max-w-7xl mx-auto px-6" id="experience">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-black mb-16 text-center uppercase tracking-widest">
+          Working <span className="text-[#bef264]">Experience</span>
         </h2>
         
-        <div className="relative border-l border-teal-500/30 ml-4 md:ml-6">
+        <div className="relative border-l border-[#bef264]/20 ml-4 md:ml-6">
           {experiences.map((exp, index) => (
             <div key={index} className="mb-10 ml-6 relative">
-              <span className="absolute -left-[31px] top-1.5 bg-teal-500 w-4 h-4 rounded-full border-4 border-[#0a192f] shadow-md shadow-teal-500/50"></span>
+              {/* Timeline Dot */}
+              <span className="absolute -left-[31px] top-1.5 bg-[#bef264] w-4 h-4 rounded-full border-4 border-[#050505] shadow-[0_0_15px_rgba(190,242,100,0.5)]"></span>
               
-              <div className="bg-[#112240] p-6 rounded-lg border border-slate-700 hover:border-teal-500/50 transition-all duration-300">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
+              {/* Experience Card */}
+              <div className="bg-[#111] p-8 rounded-[2rem] border border-[#bef264]/10 hover:border-[#bef264]/40 transition-all duration-300">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                   <div>
-                    <h3 className="text-xl font-bold text-slate-100">{exp.role}</h3>
-                    <h4 className="text-md text-teal-400 font-semibold">{exp.company} <span className="text-xs text-slate-400 font-normal">· {exp.type}</span></h4>
+                    <h3 className="text-xl font-black uppercase text-slate-100">{exp.role}</h3>
+                    <h4 className="text-md text-[#bef264] font-bold mt-1">
+                      {exp.company}
+                    </h4>
                   </div>
-                  <div className="text-right mt-1 md:mt-0">
-                    <span className="text-sm text-slate-400 block">{exp.duration}</span>
-                    <span className="text-xs text-slate-500 block">{exp.location}</span>
+                  <div className="text-left md:text-right mt-2 md:mt-0">
+                    <span className="text-xs text-gray-500 block font-medium uppercase tracking-wider">{exp.location}</span>
                   </div>
                 </div>
                 
-                <ul className="list-disc list-inside space-y-2 text-slate-300 text-sm">
+                <ul className="list-disc list-inside space-y-2 text-gray-400 text-sm leading-relaxed">
                   {exp.description.map((point, idx) => (
-                    <li key={idx}>{point}</li>
+                    <li key={idx} className="hover:text-gray-200 transition-colors">{point}</li>
                   ))}
                 </ul>
               </div>
