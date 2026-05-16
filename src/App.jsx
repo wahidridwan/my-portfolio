@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Experience from "./Experience";
+import Projects from "./Projects";
 
 const App = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -18,7 +19,7 @@ const App = () => {
     github: "https://github.com/wahidridwan",
     linkedin: "https://www.linkedin.com/in/wahid-ridwan-7959482a8/",
     email: "https://mail.google.com/mail/?view=cm&fs=1&to=wahidridwan58@gmail.com",
-    resume: "https://drive.google.com/file/d/1E_suIUNpauOxmQNzpvuX1muicpSb_FS-/view?usp=drive_link" // তোমার নতুন রেজুমে লিঙ্ক এখানে আপডেট করা হয়েছে
+    resume: "https://drive.google.com/file/d/1E_suIUNpauOxmQNzpvuX1muicpSb_FS-/view?usp=drive_link"
   };
 
   const techStack = [
@@ -42,13 +43,13 @@ const App = () => {
   return (
     <div className="min-h-screen bg-[#050505] text-white font-sans relative overflow-x-hidden pb-20">
       
-      {/* Background Layer */}
+      {/* ব্যাকগ্রাউন্ড লেয়ার */}
       <div className="fixed inset-0 z-0 opacity-20" style={{ backgroundImage: 'linear-gradient(#bef264 1px, transparent 1px), linear-gradient(90deg, #bef264 1px, transparent 1px)', backgroundSize: '80px 80px' }}></div>
       <div className="fixed inset-0 z-0 pointer-events-none" style={{ background: `radial-gradient(circle 200px at ${mousePosition.x}px ${mousePosition.y}px, transparent, #050505 100%)` }}></div>
 
       <style>{`@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } } .animate-marquee { display: flex; width: max-content; animation: scroll 25s linear infinite; }`}</style>
 
-      {/* --- HERO SECTION --- */}
+      {/* --- হিরো সেকশন --- */}
       <section className="relative z-10 pt-20 pb-12 px-6 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
         <div className="flex-1">
           <div className="mb-10 text-center md:text-left">
@@ -63,7 +64,7 @@ const App = () => {
             </p>
           </div>
 
-          {/* View All Projects Button */}
+          {/* প্রজেক্ট বাটন */}
           <div className="flex justify-center md:justify-start mb-12">
             <a href="https://github.com/wahidridwan?tab=repositories" target="_blank" rel="noreferrer"
                className="group relative inline-flex items-center px-10 py-4 font-black text-black uppercase transition-all bg-[#bef264] rounded-2xl hover:-translate-y-2 shadow-[0_0_20px_rgba(190,242,100,0.3)]">
@@ -72,7 +73,7 @@ const App = () => {
             </a>
           </div>
 
-          {/* Social Buttons */}
+          {/* সোশ্যাল বাটন */}
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
             <a href={socialLinks.github} target="_blank" rel="noreferrer" className="bg-[#1a1a1a] text-white px-6 py-3 rounded-xl font-bold uppercase border border-white/10 hover:bg-white/5 transition-all hover:-translate-y-1">
               GitHub
@@ -101,7 +102,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* --- TECH STACK MARQUEE --- */}
+      {/* --- টেক স্ট্যাক সেকশন --- */}
       <section className="relative z-10 mt-20 border-y border-white/5 bg-white/[0.02] py-16">
         <div className="max-w-7xl mx-auto px-6 mb-12"><h2 className="text-4xl md:text-6xl font-black uppercase">Tech <span className="text-[#bef264]">Stack</span></h2></div>
         <div className="relative flex overflow-hidden w-full">
@@ -116,12 +117,17 @@ const App = () => {
         </div>
       </section>
 
-      {/* --- WORKING EXPERIENCE SECTION --- */}
+      {/* --- কাজের অভিজ্ঞতা সেকশন --- */}
       <div className="relative z-10 mt-20">
         <Experience />
       </div>
 
-      {/* --- EXPERTISE BOXES --- */}
+      {/* --- আসল প্রজেক্ট সেকশন এখানে যুক্ত করা হলো --- */}
+      <div className="relative z-10 mt-20">
+        <Projects />
+      </div>
+
+      {/* --- টেকনিক্যাল এক্সপার্টাইজ সেকশন --- */}
       <section className="relative z-10 px-6 max-w-7xl mx-auto mt-32">
         <h2 className="text-3xl font-black mb-16 text-center uppercase tracking-widest">Technical <span className="text-[#bef264]">Expertise</span></h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
