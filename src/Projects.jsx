@@ -6,7 +6,7 @@ const Projects = () => {
       title: "Restaurant Ordering System",
       description: "A complete management and ordering dashboard for restaurants. Features a clean interface to track incoming orders, handle food items, and monitor real-time dining operations.",
       tech: ["HTML5", "CSS3", "JavaScript", "GitHub Pages"],
-      image: "/restaurant.jpg", // public ফোল্ডারে থাকা তোমার ছবির নাম
+      image: "/restaurant.png", // Tomar public folder-e thaka original chobi
       liveLink: "https://tamimtxd.github.io/restaurant-ordering-system/management/",
       githubLink: "https://github.com/wahidridwan/restaurant-ordering-system",
       hasLive: true
@@ -15,7 +15,7 @@ const Projects = () => {
       title: "Sentiment Analyzer UI",
       description: "An intuitive graphical user interface designed for analyzing text sentiments. It processes textual inputs and provides instant visual feedback on emotional tones and sentiment scores when compiled.",
       tech: ["Java", "Swing/JavaFX", "NLP", "UI Design"],
-      image: "/sentiment.jpg", // public ফোল্ডারে থাকা তোমার ছবির নাম
+      image: "/sentiment.png", // Tomar public folder-e thaka original chobi
       liveLink: "https://github.com/wahidridwan/SentimentAnalyzerUI#readme",
       githubLink: "https://github.com/wahidridwan/SentimentAnalyzerUI",
       hasLive: false
@@ -23,10 +23,10 @@ const Projects = () => {
   ];
 
   return (
-    <section className="py-20 bg-[#050505] text-white max-w-7xl mx-auto px-6" id="projects">
+    <section className="py-24 bg-[#050505] text-white max-w-7xl mx-auto px-6" id="projects">
       <div className="max-w-5xl mx-auto">
         
-        {/* হেডিং সেকশন (হুবহু স্ক্রিনশটের মতো) */}
+        {/* হেডিং সেকশন */}
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-2">
             Projects I've Built
@@ -58,7 +58,7 @@ const Projects = () => {
                     Featured Project
                   </span>
                   
-                  {/* লাইভ ডেমো লিঙ্ক আইকন (স্ক্রিনশটের মতো সবুজ তীর চিহ্ন) */}
+                  {/* লাইভ ডেমো লিঙ্ক আইকন (সবুজ তীর চিহ্ন) */}
                   <a 
                     href={project.liveLink} 
                     target="_blank" 
@@ -78,7 +78,7 @@ const Projects = () => {
                   {project.title}
                 </h3>
 
-                {/* টেকনোলজি স্ট্যাক (স্ক্রিনশটের মতো ডট দিয়ে সাজানো) */}
+                {/* টেকনোলজি স্ট্যাক */}
                 <div className="flex flex-wrap gap-x-4 gap-y-2 mb-6 text-xs font-bold text-gray-400">
                   {project.tech.map((t, idx) => (
                     <span key={idx} className="flex items-center gap-1.5">
@@ -88,14 +88,19 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* প্রজেক্টের ইংরেজি ডেসক্রিপশন */}
+                {/* প্রজেক্টের ডেসক্রিপশন */}
                 <p className="text-gray-400 text-sm md:text-base leading-relaxed font-medium mb-6">
                   {project.description}
                 </p>
 
-                {/* সোর্স কোড ও ডেমো বাটনের ব্যাকআপ লিঙ্ক */}
+                {/* অ্যাকশন বাটনসমূহ */}
                 <div className="flex gap-4">
-                  <a href={project.githubLink} target="_blank" rel="noreferrer" className="inline-flex items-center text-xs font-black uppercase tracking-wider text-[#bef264] hover:text-white transition-colors border border-[#bef264]/20 hover:border-white px-4 py-2 rounded-lg bg-white/5">
+                  {project.hasLive && (
+                    <a href={project.liveLink} target="_blank" rel="noreferrer" className="px-6 py-2.5 bg-[#bef264] text-black rounded-xl text-xs font-black uppercase tracking-wider transition-all hover:bg-[#bef264]/90 shadow-[0_0_15px_rgba(190,242,100,0.15)]">
+                      Live Demo
+                    </a>
+                  )}
+                  <a href={project.githubLink} target="_blank" rel="noreferrer" className="px-6 py-2.5 bg-[#1a1a1a] text-white rounded-xl text-xs font-black uppercase tracking-wider border border-white/10 hover:bg-white/5 transition-all">
                     Source Code
                   </a>
                 </div>
