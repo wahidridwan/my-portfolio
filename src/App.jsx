@@ -18,7 +18,7 @@ const App = () => {
     github: "https://github.com/wahidridwan",
     linkedin: "https://www.linkedin.com/in/wahid-ridwan-7959482a8/",
     email: "https://mail.google.com/mail/?view=cm&fs=1&to=wahidridwan58@gmail.com",
-    resume: "https://drive.google.com/file/d/1m5pMLy71aXoGcpAEIuOd6hZmHZGiMicP/view?usp=sharing" 
+    resume: "https://drive.google.com/file/d/1E_suIUNpauOxmQNzpvuX1muicpSb_FS-/view?usp=drive_link" // তোমার নতুন রেজুমে লিঙ্ক এখানে আপডেট করা হয়েছে
   };
 
   const techStack = [
@@ -72,7 +72,7 @@ const App = () => {
             </a>
           </div>
 
-          {/* Corrected Social Buttons */}
+          {/* Social Buttons */}
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
             <a href={socialLinks.github} target="_blank" rel="noreferrer" className="bg-[#1a1a1a] text-white px-6 py-3 rounded-xl font-bold uppercase border border-white/10 hover:bg-white/5 transition-all hover:-translate-y-1">
               GitHub
@@ -116,7 +116,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* 🛑 --- WORKING EXPERIENCE SECTION --- */}
+      {/* --- WORKING EXPERIENCE SECTION --- */}
       <div className="relative z-10 mt-20">
         <Experience />
       </div>
